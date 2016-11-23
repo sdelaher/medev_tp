@@ -129,18 +129,24 @@ public class Joueur {
             System.out.println("Vous n'avez pas d'argent pour sortir de prison");
         }
     }
-    
-    public void payer (Case c){
-        int debit;
+        
+    public void payer (Case c) throws pasArgentException{
+        int debit=0;
         Joueur debiteur = c.getJoueur();
         if (c instanceof Gare){
             debit = c.nbGares(debiteur);
         }
-        else if (c instance of Constructible){
+        else if (c instanceof Constructible){
             debit = c.getEmplacement() * 50 + c.getNombreMaison() * 100 + c.getNombreHotel() * 600;
         }
-        if (debit > this.fortune){
-            System.out.println("");
+        
+        if (this.fortune < debit){
+            throw new pasArgentException("Il vous manque " + (debit-this.fortune));
+        }
+        
+        else{
+           debiteur.fortune += debit;
+            this.fortune -= debit; 
         }
         
     }
