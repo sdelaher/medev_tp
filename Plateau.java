@@ -24,6 +24,22 @@ public class Plateau {
     */
     
     public Plateau(){
+        ArrayList<Case> nouveauPlateau = new ArrayList<Case>();
+       nouveauPlateau.add(new Case("depart",0));
+       nouveauPlateau.add(new Case("1",1));
+       nouveauPlateau.add(new Case("Z",2));
+       nouveauPlateau.add(new Case("3",3));
+       nouveauPlateau.add(new Case("4",4));
+       nouveauPlateau.add(new Case("gare 1",5));
+       nouveauPlateau.add(new Case("6",6));
+       nouveauPlateau.add(new Case("7",7));
+       nouveauPlateau.add(new Case("8",8));
+       nouveauPlateau.add(new Case("9",9));
+       nouveauPlateau.add(new Case("10",10));
+       nouveauPlateau.add(new Case("11",11));
+       nouveauPlateau.add(new Case("12",12));        
+       nouveauPlateau.add(new Case("13",13));
+       nouveauPlateau.add
     }
     
     
@@ -31,7 +47,10 @@ public class Plateau {
         return((int) Math.floor(Math.random()*6)+1);
     }
 
-    
+    /**
+     * @author valentinricher
+     * afficher() appelle les méthodes toString() de la classe Case
+     */
     public void afficher() {
         for (int i=0; i<liste.size(); i++) {
             liste.get(i).toString();
@@ -53,14 +72,16 @@ public class Plateau {
                 nb += 1;
             }
         }
-        return nb;
+        return nb;   
+    }
     
+    /**
+     * @author valentinricher
+     * @return true (un booléen) si la partie est finie
+     */
+    public boolean finDePartie(){
         
     }
-       
-    
-    private ArrayList<Case> liste;
-    private LinkedList<Joueur> joueurs;
     
     
 }
