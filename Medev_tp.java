@@ -6,7 +6,7 @@
 package medev_tp;
 
 /**
- *
+ *jyg
  * @author Arthur
  */
 public class Medev_tp {
