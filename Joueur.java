@@ -130,9 +130,9 @@ public class Joueur {
         }
     }
         
-    public void payer (Case c) throws pasArgentException{
+    public void payer (Case c) throws NoMoreMoney{
         int debit=0;
-        Joueur debiteur = c.getJoueur();
+        Joueur debiteur = c.getProprietaire();
         if (c instanceof Gare){
             debit = c.nbGares(debiteur);
         }
@@ -141,7 +141,7 @@ public class Joueur {
         }
         
         if (this.fortune < debit){
-            throw new pasArgentException("Il vous manque " + (debit-this.fortune));
+            throw new NoMoreMoney("Il vous manque " + (debit-this.fortune));
         }
         
         else{

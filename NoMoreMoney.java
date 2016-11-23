@@ -9,18 +9,18 @@ package medev_tp;
  *
  * @author Ruizo
  */
-public class pasArgentException extends Exception {
+public class NoMoreMoney extends Exception {
     
-    public pasArgentException() {
+    public NoMoreMoney() {
         super(); 
     }
-    public pasArgentException(String message) {
+    public NoMoreMoney(String message) {
         super(message); 
     }
-    public pasArgentException(String message, Throwable cause) {
+    public NoMoreMoney(String message, Throwable cause) {
         super(message, cause); 
     }
-    public pasArgentException(Throwable cause) {
+    public NoMoreMoney(Throwable cause) {
         super(cause); 
     }
     
