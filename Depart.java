@@ -13,7 +13,7 @@ public class Depart extends Case{
 	public int getGain() {
 		return gain;
 	}
-
+	
 	public void setGain(int gain) {
 		this.gain = gain;
 	}
