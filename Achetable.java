@@ -15,8 +15,12 @@ public abstract class Achetable extends Case{
     
     public abstract int calculerloyer();
     
-    public int getPrixt() {
+    public int getPrix() {
 		return prix;
+    }
+    
+    public Joueur getProprietaire() {
+		return proprietaire;
     }
     
 }
