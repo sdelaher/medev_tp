@@ -17,6 +17,7 @@ public class Joueur {
     private String nom;
     private int nbToursDePrison ;
     private int position;
+    private Plateau partie;
 
     public Joueur(){
         this.fortune = 100000;
@@ -24,7 +25,7 @@ public class Joueur {
         this.nom = "";
         this.nbToursDePrison = -1;
         this.position = 0;
-        
+        this.partie = new Plateau();
     }
     
     public Joueur(Joueur j){
@@ -32,16 +33,18 @@ public class Joueur {
         this.casesPossedees = j.casesPossedees;
         this.nom = j.nom;
         this.nbToursDePrison = j.nbToursDePrison;
-        this.position = position;
+        this.position = j.position;
+        this.partie = j.partie;
         
     }
     
-    public Joueur(int fortune, ArrayList<Case> casesPossedees, String nom, int nbToursDePrison, int position) {
+    public Joueur(int fortune, ArrayList<Case> casesPossedees, String nom, int nbToursDePrison, int position, Plateau partie) {
         this.fortune = fortune;
         this.casesPossedees = casesPossedees;
         this.nom = nom;
         this.nbToursDePrison = nbToursDePrison;
         this.position = position;
+        this.partie = partie;
     }
 
     public int getFortune() {
@@ -83,6 +86,15 @@ public class Joueur {
     public void setPosition(int position) {
         this.position = position;
     }
+
+    public Plateau getPartie() {
+        return partie;
+    }
+
+    public void setPartie(Plateau partie) {
+        this.partie = partie;
+    }
+    
     
     
 }
