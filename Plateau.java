@@ -29,17 +29,10 @@ public class Plateau {
     
     
     /*
-    Méthode lanceLeDe()
-    */
-    
-    public static int lanceLeDe(){
-        return((int) Math.floor(Math.random()*6)+1);
-    }
-    
-    /*
     Methode tourDeJeu()
     */
-    public void tourDeJeu(){
+    public void tourDeJeu(Joueur j){
+        int d = j.lanceDe();
         
     }
 }
