@@ -11,4 +11,10 @@ package medev_tp;
  */
 public class Plateau {
     
+    /*
+    Methode tourDeJeu()
+    */
+    public void tourDeJeu(){
+        
+    }
 }
