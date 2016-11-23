@@ -5,11 +5,21 @@
  */
 package medev_tp;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+
 /**
  *
  * @author valentinricher
  */
 public class Plateau {
+    /*
+    Attributs
+    */
+    protected ArrayList<Case> liste;
+    protected LinkedList<Joueur> joueurs:
+    
+            
     
     /*
     Methode tourDeJeu()
