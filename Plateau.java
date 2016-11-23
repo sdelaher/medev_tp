@@ -19,6 +19,38 @@ public class Plateau {
      */
     private ArrayList<Case> liste;
     private LinkedList<Joueur> joueurs;
+    
+    /**
+     * @author valentinricher
+     * Getter de liste
+     * @return liste, l'ArrayList des Cases
+     */
+    public ArrayList<Case> getListe(){
+        return liste;
+    }
+    
+    /**
+     * @author valentinricher
+     * Setter de liste
+     * @param l est l'ArrayList de Cases pris en paramètre
+     */
+    public void setListe(ArrayList<Case> l){
+        liste = l;
+    }
+    
+    /**
+     * @author valentinricher
+     * @return la liste chainee joueurs
+     */
+    public LinkedList<Joueur> getJoueurs(){
+        return joueurs;
+    }
+    
+    public void setJoueurs(LinkedList<Joueur> joueurs) {
+        this.joueurs = joueurs;
+    }
+    
+    
     /*
     Constructeurs
     */
@@ -80,8 +112,9 @@ public class Plateau {
      * @return true (un booléen) si la partie est finie
      */
     public boolean finDePartie(){
-        
+        return joueurs.size() ==1;
     }
+    
     
     
 }
