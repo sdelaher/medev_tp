@@ -5,6 +5,8 @@
  */
 package medev_tp;
 
+import java.util.LinkedList;
+
 /**
  *
  * @author Ruizo
@@ -29,7 +31,7 @@ public class Joueur {
 
     public Joueur(Joueur j) {
         this.fortune = j.fortune;
-        this.casesPossedees = j.casesPossedees.clone();
+        this.casesPossedees = j.casesPossedees;
         this.nom = j.nom;
         this.nbToursDePrison = j.nbToursDePrison;
         this.position = j.position;
@@ -115,6 +117,7 @@ public class Joueur {
         } else {
             System.out.println("Cette case ne peut pas être achetée!");
         }
+    }
     
     public void sortirPrison(){
         if (this.fortune> 50){
@@ -140,5 +143,20 @@ public class Joueur {
             System.out.println("");
         }
         
+    }
+    
+    public Case avancer(Case c, int d) {
+        
+        this.setPosition(d);
+        c=this.plateau.getListe().get(this.position);
+        return c;
+    }
+    
+    public void detruireJoueur() {
+        LinkedList l=plateau.getJoueurs();
+        
+        if(this.fortune < 0){
+            
+        }
     }
 }
