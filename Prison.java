@@ -12,10 +12,4 @@ public class Prison extends Case{
 	public void setCaution(int caution) {
 		this.caution = caution;
 	}
-	
-	public String toString(){
-		String cautionString = "" + getCaution(); // transforme caution de int  a String
-		String retourne = getNom() + " " + cautionString;
-		return retourne;
-	}
 }
