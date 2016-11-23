@@ -19,4 +19,3 @@ public class Prison extends Case{
 		return retourne;
 	}
 }
-
