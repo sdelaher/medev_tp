@@ -24,19 +24,8 @@ public class Plateau {
     */
     
     public Plateau(){
-        
     }
     
-    
-    /*
-<<<<<<< Updated upstream
-    Methode tourDeJeu()
-    */
-    public void tourDeJeu(Joueur j){
-        int d = j.lanceDe();
-=======
-    Méthode lanceLeDe()
-    */
     
     public static int lanceLeDe(){
         return((int) Math.floor(Math.random()*6)+1);
@@ -58,7 +47,7 @@ public class Plateau {
     public int nbGares(Joueur j){
         //nb est le nombre de gares qui va servir de compteur
         int nb =0;
-        boolean casesPossedees[] = j.getCasesPossedees;
+        boolean casesPossedees[] = j.getCasesPossedees();
         for (int i=0; i<casesPossedees.length;i++){
             if (casesPossedees[i]=true){
                 nb += 1;
@@ -66,7 +55,6 @@ public class Plateau {
         }
         return nb;
     
->>>>>>> Stashed changes
         
     }
        
