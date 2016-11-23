@@ -6,7 +6,7 @@ public class Depart extends Case{
 	
 	public String toString(){
 		String gainString = "" + getGain(); // transforme gain de int a String
-		String retourne = getNom() + " " + gainString;
+		String retourne = getNom() + " (gain : " + gainString + ")";
 		return retourne;
 	}
 

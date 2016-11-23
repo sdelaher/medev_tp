@@ -17,8 +17,6 @@ public abstract class Case{
 	}
 	public String toString(){
 		// methode toString()
-		String emplacementString = "" + getEmplacement();
-		String retourne = this.getNom() + " " + emplacementString;
-		return retourne;
+		return this.getNom();
 	}
 }

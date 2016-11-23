@@ -15,7 +15,7 @@ public class Prison extends Case{
 	
 	public String toString(){
 		String cautionString = "" + getCaution(); // transforme caution de int  a String
-		String retourne = getNom() + " " + cautionString;
+		String retourne = getNom() + " (caution: " + cautionString + ")";
 		return retourne;
 	}
 }
