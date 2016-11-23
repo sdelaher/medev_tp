@@ -12,14 +12,15 @@ import java.util.ArrayList;
  * @author Ruizo
  */
 public class Joueur {
+
     private int fortune;
     private boolean[] casesPossedees;
     private String nom;
-    private int nbToursDePrison ;
+    private int nbToursDePrison;
     private int position;
     private Plateau partie;
 
-    public Joueur(){
+    public Joueur() {
         this.fortune = 100000;
         this.casesPossedees = new boolean[40];
         this.nom = "";
@@ -27,17 +28,17 @@ public class Joueur {
         this.position = 0;
         this.partie = new Plateau();
     }
-    
-    public Joueur(Joueur j){
+
+    public Joueur(Joueur j) {
         this.fortune = j.fortune;
         this.casesPossedees = j.casesPossedees;
         this.nom = j.nom;
         this.nbToursDePrison = j.nbToursDePrison;
         this.position = j.position;
         this.partie = j.partie;
-        
+
     }
-    
+
     public Joueur(int fortune, boolean[] casesPossedees, String nom, int nbToursDePrison, int position, Plateau partie) {
         this.fortune = fortune;
         this.casesPossedees = casesPossedees;
@@ -94,6 +95,27 @@ public class Joueur {
     public void setPartie(Plateau partie) {
         this.partie = partie;
     }
-    
-    
+
+    public static int lancerDes() {
+        return ((int) Math.floor(Math.random() * 6)) + 1;
+    }
+
+    public void acheter(Case c) {
+        if (c instanceof Achetable) {
+            if (this.casesPossedees[c.getEmplacement()] == true) {
+                if (this.fortune >= (Achetable)c.getPrix()) {
+                    this.fortune = this.fortune - c.getPrix();
+                    this.casesPossedees[c.getEmplacement()] = true;
+                } else {
+                    System.out.println("Cette case est trop chère pour toi...");
+                }
+            }
+            else {
+                System.out.println("Cette case est déjà à toi!");
+            }
+
+        } else {
+            System.out.println("Cette case ne peut pas être achetée!");
+        }
+    }
 }
