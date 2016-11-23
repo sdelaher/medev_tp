@@ -15,5 +15,8 @@ public abstract class Case{
 	public void setEmplacement(int emplacement) {
 		this.emplacement = emplacement;
 	}
-	public abstract String toString(); // methode toString()
+	public String toString(){
+		// methode toString()
+		return this.getNom();
+	}
 }

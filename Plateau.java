@@ -59,4 +59,8 @@ public class Plateau {
     }
        
     
+    private ArrayList<Case> liste;
+    private LinkedList<Joueur> joueurs;
+    
+    
 }

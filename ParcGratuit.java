@@ -1,5 +1,5 @@
 package medev_tp;
 
-public class Chance extends Case{
+public class ParcGratuit extends Case{
 	// une sous-classe de Case
 }
