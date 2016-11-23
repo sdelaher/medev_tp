@@ -17,7 +17,7 @@ public class Plateau {
     Attributs
     */
     protected ArrayList<Case> liste;
-    protected LinkedList<Joueur> joueurs:
+    protected LinkedList<Joueur> joueurs;
     
             
     
