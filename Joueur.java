@@ -16,7 +16,7 @@ public class Joueur {
     private String nom;
     private int nbToursDePrison;
     private int position;
-    private Plateau partie;
+    private Plateau plateau;
 
     public Joueur() {
         this.fortune = 100000;
@@ -24,7 +24,7 @@ public class Joueur {
         this.nom = "";
         this.nbToursDePrison = -1;
         this.position = 0;
-        this.partie = new Plateau();
+        this.plateau = new Plateau();
     }
 
     public Joueur(Joueur j) {
@@ -33,17 +33,17 @@ public class Joueur {
         this.nom = j.nom;
         this.nbToursDePrison = j.nbToursDePrison;
         this.position = j.position;
-        this.partie = j.partie;
-
+        this.plateau = j.plateau;
+        
     }
 
-    public Joueur(int fortune, boolean[] casesPossedees, String nom, int nbToursDePrison, int position, Plateau partie) {
+    public Joueur(int fortune, boolean[] casesPossedees, String nom, int nbToursDePrison, int position, Plateau plateau) {
         this.fortune = fortune;
         this.casesPossedees = casesPossedees;
         this.nom = nom;
         this.nbToursDePrison = nbToursDePrison;
         this.position = position;
-        this.partie = partie;
+        this.plateau = plateau;
     }
 
     public int getFortune() {
@@ -86,12 +86,12 @@ public class Joueur {
         this.position = position;
     }
 
-    public Plateau getPartie() {
-        return partie;
+    public Plateau getPlateau() {
+        return plateau;
     }
 
-    public void setPartie(Plateau partie) {
-        this.partie = partie;
+    public void setPlateau(Plateau plateau) {
+        this.plateau = plateau;
     }
 
     public static int lancerDes() {
@@ -115,5 +115,30 @@ public class Joueur {
         } else {
             System.out.println("Cette case ne peut pas être achetée!");
         }
+    
+    public void sortirPrison(){
+        if (this.fortune> 50){
+        this.fortune -= 50; //caution
+        this.nbToursDePrison = -1;
+        System.out.println("Vous êtes libre, le prochain tour vous pouvez bouger dans le prochain tour");
+        }
+        else{
+            System.out.println("Vous n'avez pas d'argent pour sortir de prison");
+        }
+    }
+    
+    public void payer (Case c){
+        int debit;
+        Joueur debiteur = c.getJoueur();
+        if (c instanceof Gare){
+            debit = c.nbGares(debiteur);
+        }
+        else if (c instance of Constructible){
+            debit = c.getEmplacement() * 50 + c.getNombreMaison() * 100 + c.getNombreHotel() * 600;
+        }
+        if (debit > this.fortune){
+            System.out.println("");
+        }
+        
     }
 }
