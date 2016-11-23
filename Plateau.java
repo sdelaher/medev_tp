@@ -19,7 +19,22 @@ public class Plateau {
     protected ArrayList<Case> liste;
     protected LinkedList<Joueur> joueurs;
     
-            
+    /*
+    Constructeurs
+    */
+    
+    public Plateau(){
+        
+    }
+    
+    
+    /*
+    Méthode lanceLeDe()
+    */
+    
+    public static int lanceLeDe(){
+        return((int) Math.floor(Math.random()*6)+1);
+    }
     
     /*
     Methode tourDeJeu()
