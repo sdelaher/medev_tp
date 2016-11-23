@@ -29,7 +29,7 @@ public class Joueur {
 
     public Joueur(Joueur j) {
         this.fortune = j.fortune;
-        this.casesPossedees = j.casesPossedees;
+        this.casesPossedees = j.casesPossedees.clone();
         this.nom = j.nom;
         this.nbToursDePrison = j.nbToursDePrison;
         this.position = j.position;
