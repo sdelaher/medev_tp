@@ -13,7 +13,7 @@ public class Prison extends Case{
 	}
 	public String toString(){
 		String prixString = "" + prix; // transforme prix a int
-		String retourne = getNom() + prixString;
+		String retourne = getNom() + " " + prixString;
 		return retourne;
 	}
 }
