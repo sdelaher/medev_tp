@@ -13,14 +13,14 @@ public abstract class Achetable extends Case{
 		this.proprietaire = proprietaire;
     }
     
-    public abstract int calculerloyer();
+    public abstract int calculerLoyer();
     
     public int getPrix() {
 		return prix;
     }
     
     public Joueur getProprietaire() {
-		return proprietaire;
+		return proprietaire ;
     }
     
 }
