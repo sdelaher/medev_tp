@@ -5,10 +5,17 @@
  */
 package medev_tp;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+
 /**
  *
  * @author valentinricher
  */
 public class Plateau {
+    
+    private ArrayList<Case> liste;
+    private LinkedList<Joueur> joueurs;
+    
     
 }
