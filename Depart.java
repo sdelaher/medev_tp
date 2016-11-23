@@ -4,12 +4,6 @@ public class Depart extends Case{
 	// une sous-classe de Case
 	private int gain; // gain
 	
-	public String toString(){
-		String gainString = "" + getGain(); // transforme gain de int a String
-		String retourne = getNom() + " (gain : " + gainString + ")";
-		return retourne;
-	}
-
 	public int getGain() {
 		return gain;
 	}
