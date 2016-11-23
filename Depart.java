@@ -2,18 +2,19 @@ package medev_tp;
 
 public class Depart extends Case{
 	// une sous-classe de Case
-	private int prix; // prix
-
-	public int getPrix() {
-		return prix;
-	}
-
-	public void setPrix(int prix) {
-		this.prix = prix;
-	}
+	private int gain; // gain
+	
 	public String toString(){
-		String prixString = "" + prix; // transforme prix a int
-		String retourne = getNom() + " " + prixString;
+		String gainString = "" + getGain(); // transforme gain de int a String
+		String retourne = getNom() + " " + gainString;
 		return retourne;
+	}
+
+	public int getGain() {
+		return gain;
+	}
+
+	public void setGain(int gain) {
+		this.gain = gain;
 	}
 }

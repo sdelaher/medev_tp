@@ -2,18 +2,20 @@ package medev_tp;
 
 public class Prison extends Case{
 	// une sous-classe de Case
-	private int prix; // prix
+	private int caution; // caution
 
-	public int getPrix() {
-		return prix;
+	public int getCaution() {
+		return caution;
 	}
 
-	public void setPrix(int prix) {
-		this.prix = prix;
+
+	public void setCaution(int caution) {
+		this.caution = caution;
 	}
+	
 	public String toString(){
-		String prixString = "" + prix; // transforme prix a int
-		String retourne = getNom() + " " + prixString;
+		String cautionString = "" + getCaution(); // transforme caution de int  a String
+		String retourne = getNom() + " " + cautionString;
 		return retourne;
 	}
 }
