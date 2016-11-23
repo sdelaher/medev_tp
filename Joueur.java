@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class Joueur {
     private int fortune;
-    private ArrayList<Case> casesPossedees;
+    private boolean[] casesPossedees;
     private String nom;
     private int nbToursDePrison ;
     private int position;
@@ -21,7 +21,7 @@ public class Joueur {
 
     public Joueur(){
         this.fortune = 100000;
-        this.casesPossedees = new ArrayList<>();
+        this.casesPossedees = new boolean[40];
         this.nom = "";
         this.nbToursDePrison = -1;
         this.position = 0;
@@ -38,7 +38,7 @@ public class Joueur {
         
     }
     
-    public Joueur(int fortune, ArrayList<Case> casesPossedees, String nom, int nbToursDePrison, int position, Plateau partie) {
+    public Joueur(int fortune, boolean[] casesPossedees, String nom, int nbToursDePrison, int position, Plateau partie) {
         this.fortune = fortune;
         this.casesPossedees = casesPossedees;
         this.nom = nom;
@@ -55,11 +55,11 @@ public class Joueur {
         this.fortune = fortune;
     }
 
-    public ArrayList<Case> getCasesPossedees() {
+    public boolean[] getCasesPossedees() {
         return casesPossedees;
     }
 
-    public void setCasesPossedees(ArrayList<Case> casesPossedees) {
+    public void setCasesPossedees(boolean[] casesPossedees) {
         this.casesPossedees = casesPossedees;
     }
 
@@ -94,7 +94,6 @@ public class Joueur {
     public void setPartie(Plateau partie) {
         this.partie = partie;
     }
-    
     
     
 }
