@@ -5,8 +5,6 @@
  */
 package medev_tp;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author Ruizo
@@ -103,8 +101,8 @@ public class Joueur {
     public void acheter(Case c) {
         if (c instanceof Achetable) {
             if (this.casesPossedees[c.getEmplacement()] == true) {
-                if (this.fortune >= (Achetable)c.getPrix()) {
-                    this.fortune = this.fortune - c.getPrix();
+                if (this.fortune >= ((Achetable)c).getPrix()) {
+                    this.fortune = this.fortune - ((Achetable)c).getPrix();
                     this.casesPossedees[c.getEmplacement()] = true;
                 } else {
                     System.out.println("Cette case est trop chère pour toi...");
